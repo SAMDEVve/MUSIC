@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <div class="name">
+        <h1 class="title">SAM.MP4</h1>
+    </div>
+
+    <div class="cont">
+        <div class="all">
+            <div class="player">
+                <button id="toggle-list" class="btn-mobile-menu"><i class="bi bi-music-note-list"></i> Ver Playlist</button>
+
+                <img src="img/default.jpg" alt="Portada" id="cover">
+                <h2 id="title">Nombre de la canción</h2>
+                <p id="artist">Autor</p>
+                
+                <audio id="audio">
+                    <source src="music\SONG1.mp3" />
+                    <source src="music\SONG2.wav"/>
+                    <source src="music\Games.wav">
+                    <source src="music\song4.mp3">
+                </audio>
+
+                <div class="controls">
+                    <button id="prev"><i class="bi bi-caret-left-fill"></i></button>
+                    <button id="play"><i class="bi bi-play-circle-fill" id="play-icon"></i></button>
+                    <button id="next"><i class="bi bi-caret-right-fill"></i></button>
+                </div>
+                
+                <div class="progress-container">
+                    <input type="range" id="progress" value="0" max="100">
+                    <div class="time-wrapper">
+                        <span id="current-time">0:00</span>
+                        <span id="duration-time">0:00</span>
+                    </div>
+                </div>
+
+                <div class="volume-container mobile-volume">
+                    <i class="bi bi-volume-up-fill" id="volume-icon"></i>
+                    <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+                </div>
+            </div>
+
+            <div class="list">
+                <button id="close-list" class="btn-close-menu"><i class="bi bi-chevron-down"></i></button>
+
+                <div class="search-container">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="search-input" placeholder="Buscar canción...">
+                </div>
+
+                <div class="playlist-container">
+                    <ul id="playlist-ul">
+                        </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="playlist.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
