@@ -3,7 +3,7 @@
 
 /* 1. Fondo general y tipografía */
 body {
-    background: url(img/wall.jpg) no-repeat center center fixed;
+    background: url(wall.jpg) no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     width: 100vw;
